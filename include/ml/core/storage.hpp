@@ -2,7 +2,7 @@
 #include <vector>
 #include <cstddef>
 
-namespace ml {
+namespace ml::core {
 
     struct Storage {
         std::vector<float> data;

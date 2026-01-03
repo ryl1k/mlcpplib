@@ -1,27 +1,66 @@
 #pragma once
-#include <stdlib.h>
+#include <cstddef>
+#include <initializer_list>
+#include <memory>
 #include <vector>
-#include "../autograd/base.hpp"
 
-struct Storage {
-	std::vector<float> data;
-};
+#include "ml/core/storage.hpp"
+#include "ml/core/shape.hpp"
+
+namespace ml {
+
+    class Tensor {
+    public:
+        // --- factories ---
+        static Tensor empty(const std::vector<size_t>& sizes);
+        static Tensor zeros(const std::vector<size_t>& sizes);
+        static Tensor ones(const std::vector<size_t>& sizes);
+        static Tensor arange(size_t n);
+        static Tensor from_vector(const std::vector<float>& v,
+            const std::vector<size_t>& sizes);
+
+        // --- info ---
+        size_t ndim() const;
+        size_t numel() const;
+        const std::vector<size_t>& sizes() const;
+        const std::vector<size_t>& strides() const;
+        bool is_contiguous() const;
+
+        // --- raw data ---
+        float* data();
+        const float* data() const;
+
+        // --- indexing ---
+        float& at(std::initializer_list<size_t> idx);
+        float  at(std::initializer_list<size_t> idx) const;
+
+        // --- views ---
+        Tensor reshape(const std::vector<size_t>& new_sizes) const;
+        Tensor transpose(size_t dim0, size_t dim1) const;
+        Tensor slice(size_t dim, size_t start, size_t length) const;
+
+        // --- materialize ---
+        Tensor contiguous() const;
+
+        // for tests/debug: do two tensors share the same buffer?
+        const std::shared_ptr<Storage>& storage_ptr() const;
+
+    private:
+        // internal constructor (used for views)
+        Tensor(std::shared_ptr<Storage> storage,
+            size_t offset,
+            std::vector<size_t> sizes,
+            std::vector<size_t> strides);
+
+        float  at_vec_(const std::vector<size_t>& idx) const;
+        float& at_vec_(const std::vector<size_t>& idx);
+        static bool next_index_(std::vector<size_t>& idx, const std::vector<size_t>& sizes);
 
 
+        std::shared_ptr<Storage> storage_;
+        size_t offset_ = 0;
+        std::vector<size_t> sizes_;
+        std::vector<size_t> strides_;
+    };
 
-class Tensor {
-	// --- memory ---
-	std::shared_ptr<Storage> data;
-	size_t offset;
-
-	// --- view ---
-	std::vector<int> sizes;
-	std::vector<int> strides;
-
-	// --- autograd ---
-	bool requires_grad;
-	std::unique_ptr<Tensor> grad;
-	std::shared_ptr<GradFn> grad_fn;
-
-
-};
+} // namespace ml

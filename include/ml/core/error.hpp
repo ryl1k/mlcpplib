@@ -3,7 +3,7 @@
 #include <string>
 #include <sstream>
 
-namespace ml {
+namespace ml::core {
 
     inline [[noreturn]] void fail(const std::string& msg,
         const char* file,
@@ -17,15 +17,15 @@ namespace ml {
 
 #define ML_CHECK(cond, msg) \
     do { \
-        if (!(cond)) ::ml::fail((msg), __FILE__, __LINE__); \
+        if (!(cond)) ::ml::core::fail((msg), __FILE__, __LINE__); \
     } while (0)
 
 #define ML_CHECK_EQ(a, b, msg) \
     do { \
-        if (!((a) == (b))) ::ml::fail((msg), __FILE__, __LINE__); \
+        if (!((a) == (b))) ::ml::core::fail((msg), __FILE__, __LINE__); \
     } while (0)
 
 #define ML_CHECK_LT(a, b, msg) \
     do { \
-        if (!((a) < (b))) ::ml::fail((msg), __FILE__, __LINE__); \
+        if (!((a) < (b))) ::ml::core::fail((msg), __FILE__, __LINE__); \
     } while (0)
