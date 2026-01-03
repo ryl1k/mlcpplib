@@ -1,5 +1,6 @@
 #include "ml/tensor/tensor.hpp"
 #include "ml/core/error.hpp"
+#include "ml/core/storage.hpp"
 
 #include <algorithm> // fill, copy
 

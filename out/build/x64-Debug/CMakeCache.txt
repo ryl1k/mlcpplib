@@ -128,7 +128,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=mlcpp
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=
@@ -270,9 +270,21 @@ X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
 //Path to a program.
 Z_VCPKG_CL:FILEPATH=C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe
 
+//Path to a program.
+Z_VCPKG_PWSH_PATH:FILEPATH=C:/Program Files/PowerShell/7/pwsh.exe
+
 //The directory which contains the installed libraries for each
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=A:/010-Repos/roadmapBuilder/backend/vcpkg/installed
+
+//Value Computed by CMake
+mlcpp_BINARY_DIR:STATIC=A:/010-Repos/mlcpplib/out/build/x64-Debug
+
+//Value Computed by CMake
+mlcpp_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+mlcpp_SOURCE_DIR:STATIC=A:/010-Repos/mlcpplib
 
 
 ########################
@@ -427,6 +439,8 @@ VCPKG_MANIFEST_INSTALL:INTERNAL=OFF
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
 //Making sure VCPKG_MANIFEST_MODE doesn't change
 Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=OFF
+//The path to the PowerShell implementation to use.
+Z_VCPKG_POWERSHELL_PATH:INTERNAL=C:/Program Files/PowerShell/7/pwsh.exe
 //Vcpkg root directory
 Z_VCPKG_ROOT_DIR:INTERNAL=A:/010-Repos/roadmapBuilder/backend/vcpkg
 

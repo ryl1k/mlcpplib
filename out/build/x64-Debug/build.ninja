@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Project
+# Project: mlcpp
 # Configurations: Debug
 # =============================================================================
 
@@ -40,6 +40,127 @@ include CMakeFiles\rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = A$:\010-Repos\mlcpplib\out\build\x64-Debug\
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target mlcpp
+
+
+#############################################
+# Order-only phony target for mlcpp
+
+build cmake_object_order_depends_target_mlcpp: phony || .
+
+build CMakeFiles\mlcpp.dir\src\core\shape.cpp.obj: CXX_COMPILER__mlcpp_unscanned_Debug A$:\010-Repos\mlcpplib\src\core\shape.cpp || cmake_object_order_depends_target_mlcpp
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\mlcpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mlcpp.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
+  TARGET_PDB = mlcpp.pdb
+
+build CMakeFiles\mlcpp.dir\src\tensor\tensor.cpp.obj: CXX_COMPILER__mlcpp_unscanned_Debug A$:\010-Repos\mlcpplib\src\tensor\tensor.cpp || cmake_object_order_depends_target_mlcpp
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\mlcpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mlcpp.dir\src\tensor
+  TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
+  TARGET_PDB = mlcpp.pdb
+
+build CMakeFiles\mlcpp.dir\src\ops\matmul.cpp.obj: CXX_COMPILER__mlcpp_unscanned_Debug A$:\010-Repos\mlcpplib\src\ops\matmul.cpp || cmake_object_order_depends_target_mlcpp
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\mlcpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mlcpp.dir\src\ops
+  TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
+  TARGET_PDB = mlcpp.pdb
+
+build CMakeFiles\mlcpp.dir\src\ops\elementwise.cpp.obj: CXX_COMPILER__mlcpp_unscanned_Debug A$:\010-Repos\mlcpplib\src\ops\elementwise.cpp || cmake_object_order_depends_target_mlcpp
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\mlcpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mlcpp.dir\src\ops
+  TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
+  TARGET_PDB = mlcpp.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target mlcpp
+
+
+#############################################
+# Link the static library mlcpp.lib
+
+build mlcpp.lib: CXX_STATIC_LIBRARY_LINKER__mlcpp_Debug CMakeFiles\mlcpp.dir\src\core\shape.cpp.obj CMakeFiles\mlcpp.dir\src\tensor\tensor.cpp.obj CMakeFiles\mlcpp.dir\src\ops\matmul.cpp.obj CMakeFiles\mlcpp.dir\src\ops\elementwise.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = CMakeFiles\mlcpp.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
+  TARGET_FILE = mlcpp.lib
+  TARGET_PDB = mlcpp.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_tensor
+
+
+#############################################
+# Order-only phony target for test_tensor
+
+build cmake_object_order_depends_target_test_tensor: phony || cmake_object_order_depends_target_mlcpp
+
+build CMakeFiles\test_tensor.dir\tests\test_tensor.cpp.obj: CXX_COMPILER__test_tensor_unscanned_Debug A$:\010-Repos\mlcpplib\tests\test_tensor.cpp || cmake_object_order_depends_target_test_tensor
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\test_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_tensor.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\test_tensor.dir\
+  TARGET_PDB = test_tensor.pdb
+
+build CMakeFiles\test_tensor.dir\src\ops\matmul.cpp.obj: CXX_COMPILER__test_tensor_unscanned_Debug A$:\010-Repos\mlcpplib\src\ops\matmul.cpp || cmake_object_order_depends_target_test_tensor
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\test_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_tensor.dir\src\ops
+  TARGET_COMPILE_PDB = CMakeFiles\test_tensor.dir\
+  TARGET_PDB = test_tensor.pdb
+
+build CMakeFiles\test_tensor.dir\src\ops\elementwise.cpp.obj: CXX_COMPILER__test_tensor_unscanned_Debug A$:\010-Repos\mlcpplib\src\ops\elementwise.cpp || cmake_object_order_depends_target_test_tensor
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\test_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_tensor.dir\src\ops
+  TARGET_COMPILE_PDB = CMakeFiles\test_tensor.dir\
+  TARGET_PDB = test_tensor.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_tensor
+
+
+#############################################
+# Link the executable test_tensor.exe
+
+build test_tensor.exe: CXX_EXECUTABLE_LINKER__test_tensor_Debug CMakeFiles\test_tensor.dir\tests\test_tensor.cpp.obj CMakeFiles\test_tensor.dir\src\ops\matmul.cpp.obj CMakeFiles\test_tensor.dir\src\ops\elementwise.cpp.obj | mlcpp.lib || mlcpp.lib
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = mlcpp.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\test_tensor.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D A:\010-Repos\mlcpplib\out\build\x64-Debug && "C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file A:/010-Repos/roadmapBuilder/backend/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary A:/010-Repos/mlcpplib/out/build/x64-Debug/test_tensor.exe -installedDir A:/010-Repos/roadmapBuilder/backend/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_tensor.dir\
+  TARGET_FILE = test_tensor.exe
+  TARGET_IMPLIB = test_tensor.lib
+  TARGET_PDB = test_tensor.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -66,6 +187,10 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build mlcpp: phony mlcpp.lib
+
+build test_tensor: phony test_tensor.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -74,7 +199,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 #############################################
 # Folder: A:/010-Repos/mlcpplib/out/build/x64-Debug
 
-build all: phony
+build all: phony mlcpp.lib test_tensor.exe
 
 # =============================================================================
 # Built-in targets
@@ -83,14 +208,14 @@ build all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja A$:\010-Repos\mlcpplib\out\build\x64-Debug\cmake_install.cmake: RERUN_CMAKE | A$:\010-Repos\mlcpplib\CMakeLists.txt A$:\010-Repos\roadmapBuilder\backend\vcpkg\scripts\buildsystems\vcpkg.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\4.1.1-msvc4\CMakeCCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeCXXCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeRCCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeSystem.cmake
+build build.ninja A$:\010-Repos\mlcpplib\out\build\x64-Debug\cmake_install.cmake: RERUN_CMAKE | A$:\010-Repos\mlcpplib\CMakeLists.txt A$:\010-Repos\roadmapBuilder\backend\vcpkg\scripts\buildsystems\vcpkg.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\4.1.1-msvc4\CMakeCXXCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeRCCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build A$:\010-Repos\mlcpplib\CMakeLists.txt A$:\010-Repos\roadmapBuilder\backend\vcpkg\scripts\buildsystems\vcpkg.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\4.1.1-msvc4\CMakeCCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeCXXCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeRCCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeSystem.cmake: phony
+build A$:\010-Repos\mlcpplib\CMakeLists.txt A$:\010-Repos\roadmapBuilder\backend\vcpkg\scripts\buildsystems\vcpkg.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\4.1.1-msvc4\CMakeCXXCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeRCCompiler.cmake CMakeFiles\4.1.1-msvc4\CMakeSystem.cmake: phony
 
 
 #############################################
