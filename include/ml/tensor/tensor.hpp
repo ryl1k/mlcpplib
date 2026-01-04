@@ -4,6 +4,7 @@
 #include <memory>
 #include <vector>
 
+#include "ml/autograd/grad_fn.hpp"
 #include "ml/core/storage.hpp"
 #include "ml/core/shape.hpp"
 
@@ -34,6 +35,28 @@ namespace ml {
         float& at(std::initializer_list<size_t> idx);
         float  at(std::initializer_list<size_t> idx) const;
 
+        // --- autograd flags ---
+        bool requires_grad() const { return requires_grad_; }
+        void set_requires_grad(bool v) { requires_grad_ = v; }
+
+        // grad can not exist
+        bool has_grad() const { return (bool)grad_; }
+        const Tensor& grad() const;     // throw if none
+        Tensor& grad_mut();             // throw if none
+        void zero_grad();               // if grad exists - fill with zeros
+
+        // start backward as loss
+        // (scalar loss)
+        void backward();                // easy v1
+
+        // internal: set graph node
+        void set_grad_fn(std::shared_ptr<GradFn> fn) { grad_fn_ = std::move(fn); }
+        std::shared_ptr<GradFn> grad_fn() const { return grad_fn_; }
+
+        // factories that help autograd
+        static Tensor zeros_like(const Tensor& t);
+        static Tensor ones_like(const Tensor& t);
+
         // --- views ---
         Tensor reshape(const std::vector<size_t>& new_sizes) const;
         Tensor transpose(size_t dim0, size_t dim1) const;
@@ -58,9 +81,14 @@ namespace ml {
 
 
         std::shared_ptr<Storage> storage_;
-        size_t offset_ = 0;
+        size_t offset_{ 0 };
         std::vector<size_t> sizes_;
         std::vector<size_t> strides_;
+
+        // --- autograd metadata ---
+        bool requires_grad_{ false };
+        std::unique_ptr<Tensor> grad_;           // alocate if needed
+        std::shared_ptr<GradFn> grad_fn_;        // can be null 
     };
 
 } // namespace ml

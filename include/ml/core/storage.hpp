@@ -24,4 +24,4 @@ namespace ml::core {
         }
     };
 
-}
+} // namespace ml::core
