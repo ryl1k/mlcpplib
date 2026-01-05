@@ -85,6 +85,15 @@ build CMakeFiles\mlcpp.dir\src\ops\elementwise.cpp.obj: CXX_COMPILER__mlcpp_unsc
   TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
   TARGET_PDB = mlcpp.pdb
 
+build CMakeFiles\mlcpp.dir\tests\test_scalar_autograd.cpp.obj: CXX_COMPILER__mlcpp_unscanned_Debug A$:\010-Repos\mlcpplib\tests\test_scalar_autograd.cpp || cmake_object_order_depends_target_mlcpp
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\mlcpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mlcpp.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\mlcpp.dir\mlcpp.pdb
+  TARGET_PDB = mlcpp.pdb
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target mlcpp
@@ -93,7 +102,7 @@ build CMakeFiles\mlcpp.dir\src\ops\elementwise.cpp.obj: CXX_COMPILER__mlcpp_unsc
 #############################################
 # Link the static library mlcpp.lib
 
-build mlcpp.lib: CXX_STATIC_LIBRARY_LINKER__mlcpp_Debug CMakeFiles\mlcpp.dir\src\core\shape.cpp.obj CMakeFiles\mlcpp.dir\src\tensor\tensor.cpp.obj CMakeFiles\mlcpp.dir\src\ops\matmul.cpp.obj CMakeFiles\mlcpp.dir\src\ops\elementwise.cpp.obj
+build mlcpp.lib: CXX_STATIC_LIBRARY_LINKER__mlcpp_Debug CMakeFiles\mlcpp.dir\src\core\shape.cpp.obj CMakeFiles\mlcpp.dir\src\tensor\tensor.cpp.obj CMakeFiles\mlcpp.dir\src\ops\matmul.cpp.obj CMakeFiles\mlcpp.dir\src\ops\elementwise.cpp.obj CMakeFiles\mlcpp.dir\tests\test_scalar_autograd.cpp.obj
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64
@@ -140,6 +149,15 @@ build CMakeFiles\test_tensor.dir\src\ops\elementwise.cpp.obj: CXX_COMPILER__test
   TARGET_COMPILE_PDB = CMakeFiles\test_tensor.dir\
   TARGET_PDB = test_tensor.pdb
 
+build CMakeFiles\test_tensor.dir\tests\test_scalar_autograd.cpp.obj: CXX_COMPILER__test_tensor_unscanned_Debug A$:\010-Repos\mlcpplib\tests\test_scalar_autograd.cpp || cmake_object_order_depends_target_test_tensor
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IA:\010-Repos\mlcpplib\include
+  OBJECT_DIR = CMakeFiles\test_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_tensor.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\test_tensor.dir\
+  TARGET_PDB = test_tensor.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target test_tensor
@@ -148,7 +166,7 @@ build CMakeFiles\test_tensor.dir\src\ops\elementwise.cpp.obj: CXX_COMPILER__test
 #############################################
 # Link the executable test_tensor.exe
 
-build test_tensor.exe: CXX_EXECUTABLE_LINKER__test_tensor_Debug CMakeFiles\test_tensor.dir\tests\test_tensor.cpp.obj CMakeFiles\test_tensor.dir\src\ops\matmul.cpp.obj CMakeFiles\test_tensor.dir\src\ops\elementwise.cpp.obj | mlcpp.lib || mlcpp.lib
+build test_tensor.exe: CXX_EXECUTABLE_LINKER__test_tensor_Debug CMakeFiles\test_tensor.dir\tests\test_tensor.cpp.obj CMakeFiles\test_tensor.dir\src\ops\matmul.cpp.obj CMakeFiles\test_tensor.dir\src\ops\elementwise.cpp.obj CMakeFiles\test_tensor.dir\tests\test_scalar_autograd.cpp.obj | mlcpp.lib || mlcpp.lib
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
